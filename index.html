@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Term Project</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">MSDS.AI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/VanGogh-starry_night.jpg/640px-VanGogh-starry_night.jpg')">
+            <div class="text-center my-5">
+                <h1 class="text-white fs-3 fw-bolder">Nueral Style Transfer Project</h1>
+                <p class="text-white-50 mb-0">경영자를위한딥러닝 </p>
+            </div>
+        </header>
+        <!-- Content section-->
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>인터넷 페이지 어떻게 만드는 건가요?</h2>
+                        <p class="lead">딥러닝 배우러 와서 html과 씨름하는 내 신세..</p>
+                        <p class="mb-0">음 여기다가는 무슨말을 쓰면 좋을까요? 조금 길게 써서 지워도 되구요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="side-page-main-div"></div>
+		<h1 align="center">Neural Sytle Transfer</h1>
+		<br>
+		<!-- Reference Image 라디오 버튼 선택 -->
+        <form align="center" action="/nst_post" method="POST" enctype="multipart/form-data">
+            <h2 align="center">Reference Images</h2>
+            <p class='mb-0'> 스타일을 참조할 이미지를 선택해주세요.</p>
+            <table align="center">
+                <tr>
+                    <td><img class="refer_img" id="refer_img1" src="https://raw.githubusercontent.com/MSD-AI/DeepLearning_TermProject/main/static/images/nst_get/rain_princess.JPG"></td>
+                    <td><img class="refer_img" id="refer_img2" src="https://raw.githubusercontent.com/MSD-AI/DeepLearning_TermProject/main/static/images/nst_get/the_stary_night.JPG"></td>
+                    <td><img class="refer_img" id="refer_img3" src="https://raw.githubusercontent.com/MSD-AI/DeepLearning_TermProject/main/static/images/nst_get/scream.JPG"></td>
+                    <td><img class="refer_img" id="refer_img3" src="https://raw.githubusercontent.com/MSD-AI/DeepLearning_TermProject/main/static/images/nst_get/zentangle_art.JPG"></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="refer_img" value="rain_princess.JPG"></td>
+                    <td><input type="radio" name="refer_img" value="the_stary_night.JPG"></td>
+                    <td><input type="radio" name="refer_img" value="scream.JPG"></td>
+                    <td><input type="radio" name="refer_img" value="zentangle_art.JPG"></td>
+                </tr>
+            </table>
+        <br><br>
+        <h2 align="center">Target Image</h2>
+        <p class='mb-0'>스타일을 바꿀 이미지를 업로드해주세요.</p>
+        <div align="center" id='view_area'></div>
+        <br>
+        <input type="file" name="user_img" id="user_img" value="userIMgage" onchange="previewImage(this,'view_area')"/>
+        <input type="submit" value="이미지 변환하기"/>
+        </form>
+    </body>
+</html>
