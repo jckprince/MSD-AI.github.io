@@ -266,8 +266,8 @@ def main(refer_img_path, target_img_path):
     style_model.setTarget(style_v)
     output = style_model(content_image)
     
-    refer_img_name = refer_img_path.split('.')[0].split('/')[-1]
-    target_img_name = target_img_path.split('.')[0].split('/')[-1]
+    refer_img_name = refer_img.split('.')[0].split('/')[-1]
+    target_img_name = target_img.split('.')[0].split('/')[-1]
     fname = './static/images/nst_result/'+target_img_name+'('+refer_img_name +').JPG'
     tensor_save_bgrimage(output.data[0], fname, False)
     #save_img(fname, img)
